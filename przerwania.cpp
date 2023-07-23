@@ -14,9 +14,9 @@ ISR(INT0_vect) {
 
 int main() {
 	MCUCR |= (1 << ISC00) | (1 << ISC01);
-	GICR |= (1 << INT0); //JE¯ELI PODEPNIEMY INT0 do masy albo VCC to odpali siê ISR()
+	GICR |= (1 << INT0); //JEÂ¯ELI PODEPNIEMY INT0 do masy albo VCC to odpali siÃª ISR()
 	
-	sei();
+	sei(); // inicjuje przerwania
 	DDRA = 0xFF;
 	while(1) {
 		PORTA |= (1 <<PA1);
