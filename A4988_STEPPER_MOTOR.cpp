@@ -11,7 +11,7 @@ int main(void)
     while (1) 
     {
 		PORTB |= (1 << dir);
-		for (uint8_t x=0; x < 200; x++) { //UINT8_T bo w forze jest 200 a w uincie8_t maxymalna wartosc to 256, wiec lepsze
+		for (uint8_t x=0; x < 200; x++) { //UINT8_T bo w forze jest 200 a w uincie8_t maxymalna wartosc to 255, wiec lepsze
 			PORTB |= (1 << step);
 			_delay_us(500);
 			PORTB &= ~(1 << step);
