@@ -1,7 +1,7 @@
 #include <avr/io.h>
 #include <inttypes.h>
 #ifndef F_CPU
-#define F_CPU 8000000UL
+#define F_CPU 1000000UL
 #endif
 #include <util/delay.h>
 void USARTInit(uint16_t ubrr_value)
@@ -31,7 +31,7 @@ int main()
    USARTInit(51);    
    while(1)
    {
-      char* hej = "Hello";
+      char* hej = "Hello\n";
       USARTWriteChar(hej);
 		_delay_ms(50);
    }
